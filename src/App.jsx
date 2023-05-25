@@ -9,12 +9,10 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   const fetchHero = async () => {
-    console.log('ran')
     const randomId = Math.floor(Math.random() * 732)
     console.log(randomId, 'id')
     try {
       const response = await axios.get(`https://www.superheroapi.com/api.php/6403898876320150/${randomId}`)
-      console.log(typeof response)
       const hero = await response.data
       setPcHero(hero)
       setLoading(false)
@@ -22,12 +20,9 @@ function App() {
       console.log(error.message)
     }
   }
-
    useEffect(() => {
     fetchHero()
-
   }, [])
-
 
   return (
     <>
