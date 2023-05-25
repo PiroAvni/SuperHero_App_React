@@ -1,3 +1,9 @@
+
+
+
+*{
+  font-family:'Bangers';
+}
 .navbar {
     display: flex;
     align-items: center;

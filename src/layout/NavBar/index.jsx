@@ -6,7 +6,7 @@ import './style.css'
 
 const Navbar = () => {
   const [heroData, setHeroData] = useState([]);
-  const [name, setName] = useState("superman");
+  const [name, setName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Navbar = () => {
           `https://superheroapi.com/api.php/10160846917000330/search/${name}`
         )
         console.log(response)
-        const results = await response.results;
+        const results = await response.data;
         setIsLoading(false)
           // const data = results.map((h) => h.hero);
         setHeroData(results);
@@ -29,13 +29,13 @@ const Navbar = () => {
     }
 
     searchHeroAPI();
-  }, []);
+  }, [name]);
   
   function handleSearch(userInput) {
     setName(userInput);
     console.log(userInput);
   }
-  console.log(heroData);
+  console.log('data:',{heroData});
     return (
       <nav className="navbar">
         <div className="navbar-logo">
