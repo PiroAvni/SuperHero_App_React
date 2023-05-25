@@ -3,10 +3,13 @@
     align-items: center;
     background-color: #2B3784;
     padding: 10px;
+    height: 3rem;
+    border-radius: 8px;
   }
   
   .navbar-logo img {
     height: 30px;
+    padding: 20px;
   }
   
   .navbar-search {

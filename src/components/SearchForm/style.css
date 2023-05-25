@@ -1,5 +1,5 @@
 form input {
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #B11313;
    outline: #B11313;
@@ -7,7 +7,7 @@ form input {
   
   form .button {
     margin-left: 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     background-color: #B11313;
     color: #fff;
     border: none;
