@@ -3,7 +3,11 @@
 // const mainURL = 'https://superheroapi.com/api/';
 // const token = '10160846917000330';
 
-// const heroApi = (() => {
+
+
+
+//  const heroApi = (() => {
+
 //   const getHeroById = heroId => new Promise((resolve, reject) => {
 //     axios
 //       .get(`${mainURL + token}/${heroId}`)
@@ -30,4 +34,7 @@
 //   };
 // })();
 
-// export default heroApi;
+
+
+// export default heroApi 
+

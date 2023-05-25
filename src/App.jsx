@@ -1,8 +1,15 @@
+
 import { useState, useEffect, } from 'react'
 import axios from 'axios'
 import './App.css'
 import Cards from './components/Cards'
+=======
+import {Routes ,Route} from 'react-router-dom'
 
+
+
+import { Navbar } from './layout'
+import './App.css'
 function App() {
   // const [userHero, setUserHero] = useState({})
   const [pcHero, setPcHero] = useState({})
@@ -26,9 +33,18 @@ function App() {
 
   return (
     <>
+
     {
       loading ? <p>Loading....</p> : <Cards pcHero={pcHero}/>
     }
+=======
+    <Routes>
+      <Route>
+    <Route path="/" element={<Navbar/>} />
+    </Route>
+     
+    </Routes>
+
     </>
   )
 }
