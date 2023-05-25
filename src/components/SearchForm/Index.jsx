@@ -1,26 +1,33 @@
 import { useState, useEffect, useRef } from "react";
+import './style.css'
 
-
-const SearchForm = () => {
+const SearchForm = ({handleSearch}) => {
     const [searchTerm, setSearchTerm] = useState('');
+    
     const inputRef = useRef();
 
     const handleInputChange = (event) => {
       setSearchTerm(event.target.value);
+      console.log(event.target.value)
     };
   
-    const handleSearch = (e) => {
+    function handleSubmit(e) {
       e.preventDefault();
-      
-      
-    };
+      handleSearch(searchTerm);
+      setSearchTerm("");
+  }
+
 
     useEffect(() => {
         inputRef.current.focus();
       }, []);
   
+
+
+
+
     return (
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
         id="superhero"
           type="text"
@@ -30,8 +37,8 @@ const SearchForm = () => {
           ref={inputRef}
           onChange={handleInputChange}
         />
-        <button onClick={handleSearch}>Search</button>
-      </div>
+        <input className='button' type="submit" value="Search"/>
+      </form>
     );
   };
   

@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #2B3784;
     padding: 10px;
   }
   
@@ -13,19 +13,3 @@
     margin-left: auto;
   }
   
-  .navbar-search input {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-  }
-  
-  .navbar-search button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }

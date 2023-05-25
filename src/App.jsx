@@ -1,17 +1,19 @@
-import {Router ,Route} from 'react-router-dom'
+import {Routes ,Route} from 'react-router-dom'
 
 
-import { NavBar } from './layout'
+import { Navbar } from './layout'
 import './App.css'
 function App() {
 
 
   return (
     <>
-    <Router>
-    <Route path="/" element={<NavBar/>} />
-      
-      </Router>
+    <Routes>
+      <Route>
+    <Route path="/" element={<Navbar/>} />
+    </Route>
+     
+    </Routes>
     </>
   )
 }
